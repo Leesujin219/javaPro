@@ -13,6 +13,7 @@
 이름2:<input type="text" name="name" size="10"><br>
 주소:<input type="text" name="address" size="30"><br>
 좋아하는 동물:
+	<input type="checkbox" name="pet" value="fish">물고기
 	<input type="checkbox" name="pet" value="parrot">앵무새
 	<input type="checkbox" name="pet" value="dog">강아지
 	<input type="checkbox" name="pet" value="cat">고양이
