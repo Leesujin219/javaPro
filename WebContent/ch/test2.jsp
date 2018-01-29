@@ -85,7 +85,7 @@ body{
 </head>
 <body>
 
-<form class="form-style-9" action="<%=request.getContextPath()%>/ch/show.jsp" >
+<form class="form-style-9"  >
 <ul>
 <li>
     <input type="text" name="name" class="field-style field-split align-left" placeholder="Name" />
