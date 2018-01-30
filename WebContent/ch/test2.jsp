@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
+      <%request.setCharacterEncoding("euc-kr"); %>	
+    
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -85,22 +87,27 @@ body{
 </head>
 <body>
 
-<form class="form-style-9"  >
+<form class="form-style-9"  method="post">
 <ul>
 <li>
-    <input type="text" name="name" class="field-style field-split align-left" placeholder="Name" />
-    <input type="email" name="email" class="field-style field-split align-right" placeholder="Email" />
+    <input type="text" name="name" class="field-style field-split align-left" placeholder="Name" 
+    value="<%=request.getParameter("name")%>"/>
+    <input type="email" name="email" class="field-style field-split align-right" placeholder="Email" 
+    value="<%=request.getParameter("email")%>"/>
 
 </li>
 <li>
-    <input type="text" name="phone" class="field-style field-split align-left" placeholder="Phone" />
-    <input type="url" name="website" class="field-style field-split align-right" placeholder="Website" />
+    <input type="text" name="phone" class="field-style field-split align-left" placeholder="Phone" 
+    value="<%=request.getParameter("phone")%>"/>
+    <input type="url" name="website" class="field-style field-split align-right" placeholder="Website" 
+    value="<%=request.getParameter("website")%>"/>
 </li>
 <li>
-<input type="text" name="subject" class="field-style field-full align-none" placeholder="Subject" />
+<input type="text" name="subject" class="field-style field-full align-none" placeholder="Subject" 
+value="<%=request.getParameter("subject")%>"/>
 </li>
 <li>
-<textarea name="message" class="field-style" placeholder="Message"></textarea>
+<textarea name="message" class="field-style" placeholder="Message"><%=request.getParameter("message")%></textarea>
 </li>
 <li>
 <input type="submit" value="Send Message" />
